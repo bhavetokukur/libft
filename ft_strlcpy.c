@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 int ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -26,19 +24,4 @@ int ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	dst[i] = '\0';
 	return (ft_strlen(src));	
-}
-
-int main(void)
-{
-	char str1[50] = "Hello, World!";
-	char str2[50] = "Hello, World!";
-
-	printf("Before ft_strlcpy: %s\n", str1);
-	strlcpy(str1, str1, 13);
-	printf("After ft_strlcpy: %s\n", str1);
-
-	printf("Before strlcpy: %s\n", str2);
-	strlcpy(str2, str2, 13);
-	printf("After strlcpy: %s\n", str2);
-	return (0);
 }
