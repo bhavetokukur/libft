@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/29 14:24:18 by thaziiev          #+#    #+#             */
+/*   Updated: 2024/05/01 21:51:42 by thaziiev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "ft_strlen.c"
 
 char	*ft_strdup(const char *s)
 {
@@ -19,10 +30,10 @@ char	*ft_strdup(const char *s)
 	return (str);
 }
 
-int main(void)
-{
-    char *s = "Hello";
-    char *p = ft_strdup(s);
-    printf("%s\n", p);
-    return 0;
-}
+// int main(void)
+// {
+//     char *s = "Hello";
+//     char *p = ft_strdup(s);
+//     printf("%s\n", p);
+//     return 0;
+// }

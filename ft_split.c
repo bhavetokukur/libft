@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:24:44 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 22:05:59 by thaziiev         ###   ########.fr       */
+/*   Created: 2024/04/29 14:05:24 by thaziiev          #+#    #+#             */
+/*   Updated: 2024/05/01 22:12:01 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	**ft_split(char const *s, char c)
 {
+	char	**arr;
 	size_t	i;
 	size_t	j;
-	size_t	len_dst;
-	size_t	len_src;
+	size_t	k;
 
 	i = 0;
 	j = 0;
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(src);
-	if (dstsize == 0)
-		return (len_src);
-	if (dstsize < len_dst)
-		return (len_src + dstsize);
-	while (dst[i])
-		i++;
-	while (src[j] && i < dstsize - 1)
+	if (!s)
+		return (NULL);
+	arr = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
+	if (!arr)
+		return (NULL);
+	while (s[i])
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		while (s[i] == c)
+			i++;
+		k = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > k)
+		{
+			arr[j] = ft_substr(s, k, i - k);
+			if (!arr[j])
+				return (NULL);
+			j++;
+		}
 	}
-	dst[i] = '\0';
-	return (len_dst + len_src);
+	arr[j] = NULL;
+	return (arr);
 }

@@ -6,12 +6,11 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:27:35 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/04/11 20:32:12 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/04/30 22:37:59 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
