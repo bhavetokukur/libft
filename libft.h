@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:46:13 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 20:17:03 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/05 14:43:51 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ char 	*ft_substr(char const *s, unsigned int start, size_t len);
 char 	*ft_strjoin(char const *s1, char const *s2);
 char 	*ft_strtrim(char const *s1, char const *set);
 char 	**ft_split(char const *s, char c);
+char 	*ft_itoa(int n);
 #endif

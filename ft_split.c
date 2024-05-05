@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:05:24 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 22:12:01 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:40:41 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
 	arr = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	if (!arr)
+	if (!arr || !s)
 		return (NULL);
 	while (s[i])
 	{
@@ -36,8 +34,6 @@ char	**ft_split(char const *s, char c)
 		if (i > k)
 		{
 			arr[j] = ft_substr(s, k, i - k);
-			if (!arr[j])
-				return (NULL);
 			j++;
 		}
 	}

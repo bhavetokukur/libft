@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:12:07 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 21:59:00 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/05 20:03:58 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int	ft_atoi(const char *nptr)
 		res = res * 10 + *nptr - '0';
 		nptr++;
 	}
+	
 	return (res * sign);
 }
