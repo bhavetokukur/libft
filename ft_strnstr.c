@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:24:35 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 22:03:21 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:26:44 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	len_little;
 	size_t	len_big;
 
-	len_little = strlen(little);
-	len_big = strlen(big);
+	len_little = ft_strlen(little);
+	len_big = ft_strlen(big);
 	if (!len_little)
 		return ((char *)big);
 	if (!len_big)
@@ -32,14 +32,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     char *p;
-//     char *s = "oobar";
-//     char *l = "bar";
-
-//     p = ft_strnstr(s, l, 5);
-//     printf("%s\n", p);
-//     // p = strnstr(s, l, 4);
-// }
