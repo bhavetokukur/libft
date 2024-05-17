@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:24:18 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/16 13:06:31 by thaziiev         ###   ########.fr       */
+/*   Created: 2024/05/06 20:37:38 by thaziiev          #+#    #+#             */
+/*   Updated: 2024/05/06 21:11:57 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
-	int		j;
-	char	*str;
+	unsigned int	i;
 
 	i = 0;
-	j = ft_strlen(s);
-	str = (char *)malloc(sizeof(*str) * (j + 1));
-	while (i < j)
+	if (!s || !f)
+		return ;
+	while (*s != 0)
 	{
-		str[i] = s[i];
+		f(i, s);
+		s++;
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
 }

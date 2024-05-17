@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 21:49:01 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/01 21:50:32 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:42:39 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,3 @@ int	ft_memcmp(const void *b1, const void *b2, size_t len)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-//     int arr1[] = {1, 2, 3, 4};
-//     int arr2[] = {1, 2, 3, 4, 5};
-
-//     if (ft_memcmp(arr1, arr2, sizeof(arr2)) > 0)
-//         printf("arr1 is greater than arr2\n");
-//     else if (ft_memcmp(arr1, arr2, sizeof(arr2)) < 0)
-//         printf("arr1 is less than arr2\n");
-//     else
-//         printf("arr1 is equal to arr2\n");
-
-//     return (0);
-// }

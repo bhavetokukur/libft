@@ -6,18 +6,20 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 13:09:35 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/02 22:28:55 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:47:09 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	char			*dest_cpy;
+
+	dest_cpy = dest;
 	while (n--)
 	{
 		*(char *)dest++ = *(char *)src++;
 	}
-	return (dest);
+	return (dest_cpy);
 }
