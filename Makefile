@@ -6,7 +6,7 @@
 #    By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/05/06 21:37:24 by thaziiev         ###   ########.fr        #
+#    Updated: 2024/05/19 01:06:24 by thaziiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,11 +52,18 @@ FILES = ft_memset \
 		ft_putendl_fd \
 		ft_putnbr_fd \
 
+FILES_B = 	ft_lstnew \
+			ft_lstadd_front \
+			ft_lstsize \
+			ft_lstlast \
+
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
+SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
 
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -64,10 +71,13 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $^
+	
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
 	$(RM) $(NAME)

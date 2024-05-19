@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:46:13 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/06 21:38:33 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/19 01:05:51 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <string.h>
 # include <limits.h> 
 # include <stdint.h>
+
+typedef struct s_list
+{
+    void 			*content;
+    struct s_list 	*next;
+} 					t_list;
 
 int		ft_isalpha(char c);
 int		ft_isdigit(int c);
@@ -55,4 +61,10 @@ void 	ft_putchar_fd(char c, int fd);
 void 	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+t_list 	*ft_lstnew(void *content);
+void 	ft_lstadd_front(t_list **lst, t_list *new);
+int 	ft_lstsize(t_list *lst);
+t_list 	*ft_lstlast(t_list *lst);
+
 #endif
