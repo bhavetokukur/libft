@@ -6,13 +6,13 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 01:18:06 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/19 03:26:36 by thaziiev         ###   ########.fr       */
-/*                                                                            */d
+/*   Updated: 2024/05/21 17:36:04 by thaziiev         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
@@ -26,4 +26,4 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	new->next = last->next;
 	last->next = new;
-} 	
+}
