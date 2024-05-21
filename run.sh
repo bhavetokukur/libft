@@ -2,7 +2,7 @@
 
 rm -f a.out
 make clean
-make
+make 
 cc -Wall -Wextra -Werror -o a.out ./mytest/ft_$1_test.c -L. -lft
 echo "---------------------Om------------------------"
 ./a.out

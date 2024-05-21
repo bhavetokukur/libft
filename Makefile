@@ -6,7 +6,7 @@
 #    By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2024/05/19 01:06:24 by thaziiev         ###   ########.fr        #
+#    Updated: 2024/05/19 03:25:27 by thaziiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ FILES_B = 	ft_lstnew \
 			ft_lstadd_front \
 			ft_lstsize \
 			ft_lstlast \
+			ft_lstadd_back \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
