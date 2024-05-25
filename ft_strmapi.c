@@ -6,12 +6,11 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:06:26 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/06 20:36:26 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:41:48 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-	// str = ft_calloc(ft_strlen(s), sizeof(char));
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

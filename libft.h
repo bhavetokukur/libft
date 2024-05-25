@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:46:13 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/21 17:45:07 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:27:53 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
-# include <limits.h> 
 # include <stdint.h>
 
 typedef struct s_list
