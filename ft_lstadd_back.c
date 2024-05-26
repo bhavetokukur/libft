@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 01:18:06 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/21 17:36:04 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/05/26 13:17:22 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (lst == NULL || new == NULL)
-		return ;
-	if (*lst == NULL)
+	if (lst)
 	{
-		*lst = new;
-		return ;
+		if (*lst == NULL)
+			*lst = new;
+		else
+		{
+			last = ft_lstlast(*lst);
+			last->next = new;
+		}
 	}
-	last = ft_lstlast(*lst);
-	new->next = last->next;
-	last->next = new;
 }
