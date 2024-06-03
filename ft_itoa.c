@@ -6,7 +6,7 @@
 /*   By: thaziiev <thaziiev@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 16:05:22 by thaziiev          #+#    #+#             */
-/*   Updated: 2024/05/06 16:48:46 by thaziiev         ###   ########.fr       */
+/*   Updated: 2024/06/03 21:16:54 by thaziiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	len = count_digits(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[0] = '-';
